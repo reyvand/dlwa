@@ -41,6 +41,11 @@ return [
             'provider' => 'ngiclix_users',
         ],
 
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'ngiclix_admin',
+        ],
+
         // 'api' => [
         //     'driver' => 'token',
         //     'provider' => 'users',
@@ -70,6 +75,10 @@ return [
             'model' => App\User::class,
         ],
 
+        'ngiclix_admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         $this->call([
             ngiclix_users_seed::class,
+            ngiclix_admin_seed::class,
         ]);
     }
 }

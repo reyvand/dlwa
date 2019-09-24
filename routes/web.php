@@ -38,3 +38,17 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile', 'UsersController@updateProfile');
     Route::post('/changepass','UsersController@resetPass');
 });
+
+// Admin route
+Route::prefix('admin')->group(function () {
+    Route::middleware('auth:admin')->group(function () {
+        Route::get('/', function() {
+            return view('admin/dashboard');
+        });
+    });
+    Route::get('/signin', function () {
+        return view('admin/signin');
+    })->name('adminlogin');
+    Route::post('/signin', 'AdminController@signin');
+    Route::get('/signout', 'AdminController@signout');
+});
