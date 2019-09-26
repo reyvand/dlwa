@@ -52,6 +52,7 @@
         
     </div>
     </nav>
+    @auth
     <div class="columns" style="margin-top: 20px;">
     <div class="column is-one-quarter">
       <div class="menu">
@@ -64,6 +65,7 @@
         </ul>
       </div>
     </div>
+    @endauth
     <div class="column">
       @section('content')   
       @show

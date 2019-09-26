@@ -45,6 +45,8 @@ Route::prefix('admin')->group(function () {
         Route::get('/', function() {
             return view('admin/dashboard');
         });
+        Route::get('/messages','ContactController@index');
+        Route::get('/messages/delete/{id}','ContactController@delete');
     });
     Route::get('/signin', function () {
         return view('admin/signin');
