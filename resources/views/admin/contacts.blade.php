@@ -17,7 +17,7 @@
         <td>{{$d->contacts_id}}</td>
         <td>{{$d->contacts_name}}</td>
         <td>{{$d->contacts_email}}</td>
-        <td>{{$d->contacts_message}}</td>
+        <td>{!!$d->contacts_message!!}</td>
       <td><a href="{{ URL::to('/admin/messages/delete') }}/{{ $d->contacts_id }}"><i class="fas fa-trash"></i></a></td>
       </tr>
   @endforeach
